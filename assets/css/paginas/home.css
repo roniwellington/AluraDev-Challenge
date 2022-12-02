@@ -1,0 +1,35 @@
+.home__main {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.editor {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.editor__container {
+    margin-bottom: 2rem;
+}
+
+.editor__button {
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .home__main {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .editor {
+        width: 50%;
+    }
+
+    .menu,
+    .project{
+        width: calc(25% - 1.25rem);
+    }
+}

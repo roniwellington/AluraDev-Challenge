@@ -1,48 +1,104 @@
-.nav__menu {
-    width: 23%;
+.menu {
+    right: -100%;
+    transition: right 0.7s cubic-bezier(0.49, -0.24, 0.57, 1.26);
 }
 
-.nav__menu ul {
-    list-style-type: none;
+.menu__list {
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--branco-8);
 }
 
-.nav__menu__item {
-    margin-top: 1rem;
+.menu__item:nth-child(1){
+    margin-bottom: 1rem;
 }
 
-.nav__menu__item a{
+.menu__link {
+    color: var(--branco-56);
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.menu__link:hover {
+    color: var(--branco-72);
+}
+
+.menu__link:active {
+    color: var(--branco);
+}
+
+.link--active {
+    color: var(--branco);
+}
+
+.menu__is--open {
+    right: 0.625rem;
+}
+
+.main__search{
     display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #fff;
+    opacity: 0;
+    padding: 0 2rem;
+    position: absolute;
+    right: 0;
+    transition: opacity 0.2s ease-in-out;
+    transition: top 0.7s cubic-bezier(0.49, -0.24, 0.57, 1.26);
+    top: 150vh;
+    width: 100%;
+    z-index: 2;
 }
 
-.item-inactive {
-    opacity: 0.4;
+.main__search > input {
+    background-color: var(--blue-350);
+    border: 2px solid transparent;
+    box-shadow: var(--box-shadow);
+    width: 100%;
 }
 
-.item-inactive:hover {
-    opacity: 0.8;
+.main__search > input:hover {
+    background-color: var(--blue-350);
+    border: 2px solid var(--blue-300);
 }
 
-.icon-active {
-    padding: 12px;
-    border-radius: 16px;
-    background-color: var(--blue-active-icon);
+.is--visible {
+    top: calc(70vh + 2rem);
+    opacity: 1;
 }
 
-.icon-inactive {
-    padding: 12px;
-    border-radius: 16px;
-    background-color: rgba(80, 129, 251, 0.4);
+@media screen and (min-width: 1023px) {
+    .menu {
+        background-color: var(--blue-350);
+        border-radius: calc(var(--border-radius)/ 2);
+        box-shadow: var(--box-shadow);
+        height: 70vh;
+        margin-top: 1rem;
+        padding: 1.5rem;
+        position: absolute;
+        top: 0;
+        width: 40vw;
+        z-index: 2;
+    }
 }
 
-.nav__menu__item a span {
-    margin-left: 1rem;
+@media screen and (min-width: 500px) {
+    .menu{
+        width: 70vw;
+    }
 }
 
-@media screen and (max-width: 1023px) {
-    .nav__menu {
+@media screen and (min-width: 1024px){
+    .menu {
+        display: block;
+        position: initial;
+    }
+
+    .menu__list {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .menu__user {
         display: none;
     }
 }

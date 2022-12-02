@@ -1,109 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alura Dev</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&family=Roboto+Mono:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&family=Roboto+Mono:wght@100;200;300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/dracula.css">
     <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/modulos/input.css">
+    <link rel="stylesheet" href="./assets/css/modulos/menu-icon.css">
+    <link rel="stylesheet" href="./assets/css/modulos/code-editor.css">
+    <link rel="stylesheet" href="./assets/css/modulos/user.css">
+    <link rel="stylesheet" href="./assets/css/modulos/modal.css">
     <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/helpers.css">
+    <link rel="stylesheet" href="./assets/css/paginas/home.css">
     <link rel="stylesheet" href="./assets/css/menu.css">
-    <link rel="stylesheet" href="./assets/css/code-editor.css">
+    <link rel="stylesheet" href="./assets/css/aside.css">
+    <link rel="stylesheet" href="./assets/css/project-form.css">
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <h1>
-                    <img src="./assets/img/Logo.png" alt="logo Alura Dev">
-                </h1>
-            </div>
 
-            <div class="search__bar">
-                <form action="" class="form">
-                    <label for="search" class="sr-only">Barra de pesquisa</label>
-                    <input class="generic__input search__bar__input" type="search" id="search" name="search" placeholder="Busque por algo">
-                </form>
-            </div>
+    <header class="header container">
+        <h1 class="header__title">
+            <a href="header__logo" href="./index.html">
+                <img src="./assets/img/Logo.png" alt="Logo Alura Dev">
+            </a>
+        </h1>
 
-            <div class="profile">
-                <div class="profile__container">
-                    <img src="./assets/img/Photo.png" alt="Foto do Usuario">
-                    <p>Wellington</p>
+        <input class="header__search" type="search" placeholder="Busque por algo">
+
+        <div class="header__icons">
+            <button id="botaoBusca" class="icon__search button button--icon">
+                <img src="./assets/img/lupinha.png" alt="">
+            </button>
+            <button id="botaoMenu" class="icon__menu button button--icon">
+                <span class="icon__menu__mobile"></span>
+            </button>
+        </div>
+
+        <div class="user__container">
+            <a href="https://avatars.githubusercontent.com/u/94912867?v=4" target="_blank">
+                <div class="header__user user">
+                    <div class="user__thumb"></div>
+                    <h3 class="user__name">roniwellington</h3>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <section class="home__main container">
+        <nav class="menu">
+            <h2 class="menu__title">Menu</h2>
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a class="menu__link link--active" href="./index.html">
+                        <div class="menu__icon">
+                            <img src="./assets/img/editor.png" alt="Editor de código">
+                        </div>
+                        Editor de Código
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link ativo" href="./community.html">
+                        <div class="menu__icon">
+                            <img src="./assets/img/comunidade.png" alt="Comunidade">
+                        </div>
+                        Comunidade
+                    </a>
+                </li>
+            </ul>
+            <a href="https://github.com/roniwellington" target="_blank">
+                <div class="menu__user user">
+                    <div class="user__thumb"></div>
+                    <h3 class="user__name">RoniWellington</h3>
+                </div>
+            </a>
+        </nav>
+
+        <div id="searchBar" class="main__search">
+            <input type="search" placeholder="Busque por algo" class="search__bar">
+            <button id="closeBusca" class="search__button button button--icon">
+                <img src="./assets/img/icon-close.svg" alt="fechar busca">
+            </button>
+        </div>
+
+        <section class="editor">
+            <div id="editorContainer" class="editor__container">
+                <code class="editor__code hljs" contenteditable="true" aria-label="editor"></code>
+                <div class="dots">
+                    <span class="dot dot--red"></span>
+                    <span class="dot dot--yellow"></span>
+                    <span class="dot dot--green"></span>
                 </div>
             </div>
 
-            <div class="responsive__header">
-                <button class="responsive__header__search"><img src="./assets/img/lupinha.png" alt="Icone da barra de pesquisa"></button>
-                <button class="responsive__header__menu"><img src="./assets/img/Menu hamburguer.png" alt="Icone do menu de navegação"></button>
-            </div>
-        </header>
+            <div class="editor__export">
+                <button id="exportNav" class="export__nav">
+                    <img src="./assets/img/icon-save.svg" alt="exportar código">
+                </button>
+                <div class="export__container">
+                    <div class="export__content">
+                        <h2 class="export__title">Salvar como:</h2>
+                        <button id="exportButtonImg" class="export__button">Salvar</button>
+                        <select id="exportSelectImg" class="export__select">
+                            <option value="jpg">JPG</option>
+                            <option value="png">PNG</option>
+                            <option value="svg">SVG</option>
+                        </select>
+                    </div>
 
-        <main>
-            <section class="nav__menu">
-                <h2 class="generic__title">Menu</h2>
-                <ul>
-                    <li class="nav__menu__item">
-                        <a href="index.html" class="item-active">
-                            <img class="icon-active" src="./assets/img/editor.png" alt="ícone da opção Editor de código">
-                            <span>Editor de Código</span>
-                        </a>
-                    </li>
-                    <li class="nav__menu__item">
-                        <a href="index.html" class="item-inactive">
-                            <img class="icon-inactive" src="./assets/img/comunidade.png" alt="ícone da opção Comunidade">
-                            <span>Comunidade</span>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="code__editor">
-                <div class="code__editor__bg">
-                    <div class="code__editor__window">
-                        <div class="code__editor__window__toolbar">
-                            <span class="toolbar--red-circle"></span>
-                            <span class="toolbar--yellow-circle"></span>
-                            <span class="toolbar--green-circle"></span>
-                        </div>
-                        <div class="code__editor__wrapper">
-                            <code class="preview hljs" contenteditable="true" aria-label="editor" spellcheck="false"></code>
-                        </div>
+                    <div class="export__content">
+                        <h2 class="export__title">Exportar como:</h2>
+                        <button id="exportButtonCode" class="export__button">Exportar</button>
+                        <select id="exportSelectCode" class="export__select">
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="js">JavaScript</option>
+                        </select>
                     </div>
                 </div>
-                <button class="highlight-button">Visualizar com o highlight</button>
-            </section>
+            </div>
 
-            <section class="project__form">
-                <form class="project__from__container">
-                    <h2 class="generic__title">Seu projeto</h2>
-                    <div class="input__group">
-                        <label class="sr-only" for="project-name">Campo para nome do projeto</label>
-                        <input class="generic__input project__from__input" type="text" name="project-name" id="project-name" placeholder="Nome do seu projeto">
-                    </div>
-                    <div class="input__group">
-                        <label class="sr-only" for="project-name">Campo para descrição do projeto</label>
-                        <textarea class="generic__input project__form__input project__form__input__description" name=" description" id="description" cols="30" rows="10" placeholder="Descrição do seu projeto"></textarea>
-                    </div>
+            <button id="chooselang" class="editor__button button button--outline">Visualizar com o highlight</button>
+        </section>
 
-                    <h2 class="generic__title">Personalização</h2>
-                    <div class="project__form__customize">
-                        <div class="language-selector">
-                            <select class="generic__input projeto__form__input language">
-                                <option value="javascript">JavaScript</option>
-                                <option value="html">HTML</option>
-                                <option value="css">CSS</option>
-                            </select>
-                        </div>
-                        <div class="project__form__input color__selector">
-                            <input class="color__selector__input" type="color" value="#6bd1ff">
-                        </div>
-                    </div>
-                    <button class="project__form__input save__button">Salvar projeto</button>
-                </form>
-            </section>
-        </main>
-    </div>
+        <aside class="project">
+            <div class="project__info">
+                <h2 class="project__title">Seu projeto</h2>
+                <input type="text" id="project__name" placeholder="Nome do seu projeto" data-title>
+                <textarea class="input" id="project__description" rows="5" placeholder="Descrição do projeto"
+                    data-description></textarea>
+            </div>
+            <div class="project__setting">
+                <h2 class="project__title">Personalização</h2>
+                <select id="codeLang" data-codeLang>
+                    <option value="Javascript">Javascript</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                </select>
+                <input id="editorColor" type="color" value="#6bd1ff" class="project__color" data-color>
+            </div>
+            <button data-save-btn class="project__button button button--fill">Salvar projeto</button>
+            <button data-delete-btn class="project__button button button--outline is--hide">Deletar projeto</button>
+        </aside>
+    </section>
+    <div data-modal class="modal is--hide"></div>
+
+
+    <script src="./assets/scrips/main.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,20 @@
+.menu__icon {
+    background-color: rgba(var(--blue-rgba-300), .16);
+    border-radius: 1rem;
+    display: inline-block;
+    margin-right: 1rem;
+    padding: .5rem;
+    transition: background var(--transition-default);
+}
+
+.menu__icon:hover {
+    background-color: rgba(var(--blue-rgba-300), .64);
+}
+
+.menu__icon:active{
+    background-color: var(--blue-rgba-300);
+}
+
+.link--active .menu__icon{
+    background-color: var(--blue-300);
+}

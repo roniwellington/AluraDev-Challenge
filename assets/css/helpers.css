@@ -1,0 +1,20 @@
+.is--hide {
+    display: none;
+}
+
+.container {
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+@media screen and (min-width: 768px) {
+    container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
