@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Dev</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&family=Roboto+Mono:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/menu.css">
+    <link rel="stylesheet" href="./assets/css/code-editor.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>
+                    <img src="./assets/img/Logo.png" alt="logo Alura Dev">
+                </h1>
+            </div>
+
+            <div class="search__bar">
+                <form action="" class="form">
+                    <label for="search" class="sr-only">Barra de pesquisa</label>
+                    <input class="generic__input search__bar__input" type="search" id="search" name="search" placeholder="Busque por algo">
+                </form>
+            </div>
+
+            <div class="profile">
+                <div class="profile__container">
+                    <img src="./assets/img/Photo.png" alt="Foto do Usuario">
+                    <p>Wellington</p>
+                </div>
+            </div>
+
+            <div class="responsive__header">
+                <button class="responsive__header__search"><img src="./assets/img/lupinha.png" alt="Icone da barra de pesquisa"></button>
+                <button class="responsive__header__menu"><img src="./assets/img/Menu hamburguer.png" alt="Icone do menu de navegação"></button>
+            </div>
+        </header>
+
+        <main>
+            <section class="nav__menu">
+                <h2 class="generic__title">Menu</h2>
+                <ul>
+                    <li class="nav__menu__item">
+                        <a href="index.html" class="item-active">
+                            <img class="icon-active" src="./assets/img/editor.png" alt="ícone da opção Editor de código">
+                            <span>Editor de Código</span>
+                        </a>
+                    </li>
+                    <li class="nav__menu__item">
+                        <a href="index.html" class="item-inactive">
+                            <img class="icon-inactive" src="./assets/img/comunidade.png" alt="ícone da opção Comunidade">
+                            <span>Comunidade</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="code__editor">
+                <div class="code__editor__bg">
+                    <div class="code__editor__window">
+                        <div class="code__editor__window__toolbar">
+                            <span class="toolbar--red-circle"></span>
+                            <span class="toolbar--yellow-circle"></span>
+                            <span class="toolbar--green-circle"></span>
+                        </div>
+                        <div class="code__editor__wrapper">
+                            <code class="preview hljs" contenteditable="true" aria-label="editor" spellcheck="false"></code>
+                        </div>
+                    </div>
+                </div>
+                <button class="highlight-button">Visualizar com o highlight</button>
+            </section>
+
+            <section class="project__form">
+                <form class="project__from__container">
+                    <h2 class="generic__title">Seu projeto</h2>
+                    <div class="input__group">
+                        <label class="sr-only" for="project-name">Campo para nome do projeto</label>
+                        <input class="generic__input project__from__input" type="text" name="project-name" id="project-name" placeholder="Nome do seu projeto">
+                    </div>
+                    <div class="input__group">
+                        <label class="sr-only" for="project-name">Campo para descrição do projeto</label>
+                        <textarea class="generic__input project__form__input project__form__input__description" name=" description" id="description" cols="30" rows="10" placeholder="Descrição do seu projeto"></textarea>
+                    </div>
+
+                    <h2 class="generic__title">Personalização</h2>
+                    <div class="project__form__customize">
+                        <div class="language-selector">
+                            <select class="generic__input projeto__form__input language">
+                                <option value="javascript">JavaScript</option>
+                                <option value="html">HTML</option>
+                                <option value="css">CSS</option>
+                            </select>
+                        </div>
+                        <div class="project__form__input color__selector">
+                            <input class="color__selector__input" type="color" value="#6bd1ff">
+                        </div>
+                    </div>
+                    <button class="project__form__input save__button">Salvar projeto</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
