@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Dev | Comunidade</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto+Mono&display=swap"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/css/dracula.css" />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/input.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/button.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/menu-icon.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/code-editor.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/user.css" />
+    <link rel="stylesheet" href="./assets/css/modulos/card.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/helpers.css" />
+    <link rel="stylesheet" href="./assets/css/paginas/comunidade.css" />
+    <link rel="stylesheet" href="./assets/css/aside.css" />
+    <link rel="stylesheet" href="./assets/css/menu.css" />
+</head>
+<body>
+    <header class="header container">
+        <h1 class="header__title">
+          <a class="header__logo" href="./index.html">
+            <img src="./assets/img/Logo.png" alt="Logo Alura Dev" />
+          </a>
+        </h1>
+  
+        <input
+          class="header__search"
+          type="search"
+          placeholder="Busque por algo"
+        />
+  
+        <div class="header__icons">
+          <button id="botaoBusca" class="icon__search button button--icon">
+            <img src="./assets/img/lupinha.png" alt="busca" />
+          </button>
+          <button id="botaoMenu" class="icon__menu button button--icon">
+            <span class="icon__menu__mobile"></span>
+          </button>
+        </div>
+  
+        <div class="user__container">
+          <a href="https://github.com/roniwellington" target="_blank">
+            <div class="header__user user">
+              <div class="user__thumb"></div>
+              <h3 class="user__name">Roniwellington</h3>
+            </div>
+          </a>
+        </div>
+      </header>
+  
+      <section class="comunidade__main container">
+        <nav class="menu">
+          <h2 class="menu__title">Menu</h2>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="./index.html">
+                <div class="menu__icon">
+                  <img
+                    src="./assets/img/editor.png"
+                    alt="Editor de código"
+                  />
+                </div>
+                Editor de Código
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link link--active" href="./comunidade.html">
+                <div class="menu__icon">
+                  <img
+                    src="./assets/img/comunidade.png"
+                    alt="Comunidade"
+                  />
+                </div>
+                Comunidade
+              </a>
+            </li>
+          </ul>
+          <a href="https://github.com/roniwellington" target="_blank">
+            <div class="menu__user user">
+              <div class="user__thumb"></div>
+              <h3 class="user__name">Wellington</h3>
+            </div>
+          </a>
+        </nav>
+  
+        <div id="searchBar" class="main__search">
+          <input
+            type="search"
+            placeholder="Busque por algo"
+            class="search__bar"
+          />
+          <button id="closeBusca" class="search__button button button--icon">
+            <img src="./assets/img/icon-close.svg" alt="fechar busca" />
+          </button>
+        </div>
+  
+        <section class="editor">
+          <ul class="editor__list" data-lista-projetos></ul>
+        </section>
+      </section>
+      <script type="module" src="./assets/scrips/comunidade.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+</body>
+</html>

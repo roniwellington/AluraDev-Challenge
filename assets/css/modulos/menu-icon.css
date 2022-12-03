@@ -1,14 +1,14 @@
-.menu__icon {
-    background-color: rgba(var(--blue-rgba-300), .16);
+.menu__icon{
+    background-color: rgba(var(--blue-rgba-300), .16 );
     border-radius: 1rem;
     display: inline-block;
     margin-right: 1rem;
-    padding: .5rem;
+    padding:.5rem;
     transition: background var(--transition-default);
 }
 
-.menu__icon:hover {
-    background-color: rgba(var(--blue-rgba-300), .64);
+.menu__icon:hover{
+    background-color: rgba(var(--blue-rgba-300), .64 );
 }
 
 .menu__icon:active{

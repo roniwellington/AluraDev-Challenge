@@ -13,34 +13,34 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 80vw;
-}
-
-.modal__title {
+  }
+  
+  .modal__title {
     letter-spacing: initial;
     font-weight: 600;
     font-size: 1.25rem;
-}
-
-.modal__text {
+  }
+  
+  .modal__text {
     font-size: 1rem;
     line-height: 1.3;
     font-weight: 100;
     margin-bottom: 1rem;
     color: var(--branco-64);
-}
-
-.modal__buttons {
+  }
+  
+  .modal__buttons {
     display: flex;
     justify-content: space-around;
-}
-
-.modal__button {
-    width: calc(50% - 1rem);
-}
-
-@media screen and (min-width: 1024px) {
-    .modal{
-        max-width: 35rem;
-        min-height: 20rem;
-    }
-}
+  }
+  
+  .modal__button{
+      width: calc(50% - 1rem);
+  } 
+  
+  @media screen and (min-width: 1024px){
+      .modal{
+          max-width: 35rem;
+          min-height: 20rem;
+      }
+  }

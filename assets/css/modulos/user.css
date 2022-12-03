@@ -1,6 +1,6 @@
 .user {
     align-items: center;
-    border-radius: calc(var(--border-radius)/2);
+    border-radius: calc(var(--border-radius) / 2);
     display: flex;
     padding: .75rem;
     transition: background var(--transition-default);
